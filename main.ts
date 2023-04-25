@@ -7,7 +7,7 @@ dotenv.config();
 
 const main = async () => {
   const env = "mainnet-beta";
-  const privateKey = process.env.BOT_PRIVATE_KEY as string; // stored as an array string
+  const privateKey = process.env.PRIVATE_KEY as string; // stored as an array string
   const rpcAddress = process.env.RPC_ADDRESS as string; // can use: https://api.devnet.solana.com for devnet; https://api.mainnet-beta.solana.com for mainnet;
   const { bulkAccountLoader, driftClient, userMap } = await getDriftClient(
     privateKey,
